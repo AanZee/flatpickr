@@ -1028,6 +1028,7 @@ function Flatpickr(element, config) {
 	function redraw() {
 		if (self.config.noCalendar || self.isMobile) return;
 
+		setupLocale();
 		buildWeekdays();
 		updateNavigationCurrentMonth();
 		buildDays();
