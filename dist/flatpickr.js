@@ -1108,7 +1108,8 @@ function Flatpickr(element, config) {
 	}
 
 	function set(option, value) {
-		self.config[option] = value;
+		if (option !== null && (typeof option === "undefined" ? "undefined" : _typeof(option)) === "object") _extends(self.config, option);else self.config[option] = value;
+
 		self.redraw();
 		jumpToDate();
 	}
