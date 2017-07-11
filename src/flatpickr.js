@@ -1258,8 +1258,8 @@ function Flatpickr(element, config) {
 			);
 
 		let top = (window.pageYOffset + inputBounds.top) + (!showOnTop
-			? (input.offsetHeight + 2)
-			: (- calendarHeight - 2)
+			? 0
+			: (- calendarHeight - 2 + input.offsetHeight)
 		);
 
 		toggleClass(self.calendarContainer, "arrowTop", !showOnTop);
