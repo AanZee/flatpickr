@@ -999,10 +999,10 @@ function Flatpickr(element, config) {
 		    distanceFromBottom = window.innerHeight - inputBounds.bottom + input.offsetHeight,
 		    showOnTop = configPos === "above" || configPos !== "below" && distanceFromBottom < calendarHeight && inputBounds.top > calendarHeight;
 
-		var top = window.pageYOffset + inputBounds.top + (!showOnTop ? input.offsetHeight + 2 : -calendarHeight - 2);
+		var top = window.pageYOffset + inputBounds.top + (!showOnTop ? 0 : -calendarHeight - 2 + input.offsetHeight);
 
-		toggleClass(self.calendarContainer, "arrowTop", !showOnTop);
-		toggleClass(self.calendarContainer, "arrowBottom", showOnTop);
+		toggleClass(self.calendarContainer, "arrowTop", false);
+		toggleClass(self.calendarContainer, "arrowBottom", false);
 
 		if (self.config.inline) return;
 
