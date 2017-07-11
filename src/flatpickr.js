@@ -1262,8 +1262,8 @@ function Flatpickr(element, config) {
 			: (- calendarHeight - 2 + input.offsetHeight)
 		);
 
-		toggleClass(self.calendarContainer, "arrowTop", !showOnTop);
-		toggleClass(self.calendarContainer, "arrowBottom", showOnTop);
+		toggleClass(self.calendarContainer, "arrowTop", false);
+		toggleClass(self.calendarContainer, "arrowBottom", false);
 
 		if (self.config.inline)
 			return;
